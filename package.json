@@ -1,0 +1,35 @@
+{
+  "name": "123",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.6.2",
+    "express": "",
+    "moment": "",
+    "request": "",
+    "random-number": "",
+    "mathjs": "",
+    "quick.db": "",
+    "canvas": "",
+    "snekfetch": "",
+    "discordjs-prompter":"",
+    "superagent": "",
+    "weather-js": "",
+    "os-name": "",
+    "simple-youtube-api": "",
+    "weather": "",
+    "node-gyp": "^7.1.0",
+    "node-opus": "^0.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "author": "123",
+  "license": "ISC",
+  "description": ""
+}

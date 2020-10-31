@@ -1,2 +1,2 @@
 # bot-js
-11 discord.js
+Бот написан на 11 discord.js

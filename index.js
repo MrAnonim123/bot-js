@@ -42,48 +42,6 @@ db.add(`xp_${message.author.id}`, 1);
     client.uId = message.author.id;
          
        if(message.channel.type === 'dm') return
-
-    if(message.content.startsWith(prefix + "eval")){
-       if (
-        message.author.id === "524348995829497859" || message.author.id === "383176214854238210"
-      ) {
-        const args = message.content.slice(prefix.length).split(" ");
-        try {
-          var code = args.slice(1).join(" ");
-          var evaled = eval(code);
-          let hrStart = process.hrtime();
-          let hrDiff = process.hrtime(hrStart);
-          let type = typeof evaled;
-          if (typeof evaled !== "string")
-            evaled = require("util").inspect(evaled);
-  
-          message.channel.send(
-            `
-    \`\`\`fix
-    Output type: ${type}
-    Execution time: ${hrDiff[0] > 0 ? `${hrDiff[0]}s ` : ""}${hrDiff[1] /
-              1000000}ms
-    Output:
-    \`\`\`` +
-              `
-    \`\`\`js
-    ${clean(evaled)}\`\`\``
-          );
-        } catch (err) {
-          message.channel.sendMessage(
-            `\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``
-          );
-        }
-        
-      }
-      function clean(text) {
-        if (typeof text === "string")
-          return text
-            .replace(/`/g, "`" + String.fromCharCode(8203))
-            .replace(/@/g, "@" + String.fromCharCode(8203));
-        else return text;
-      }
-    }
     
   if (message.content.startsWith(prefix + "marry")) {
      if (db.fetch(`marry_${message.guild.id}_${message.author.id}`))
